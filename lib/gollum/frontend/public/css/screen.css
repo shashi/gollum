@@ -13,7 +13,8 @@ html, body {
 }
 
 body {
-  background-color: white;
+  background-color: #f1f1f1;
+  color: #222;
   font: 13.34px helvetica, arial, freesans, clean, sans-serif;
   *font-size: small;
 }
@@ -22,6 +23,57 @@ table {
   font-size: inherit;
   font: 100%;
 }
+
+/*HACK*/
+a {
+  color: #777;
+  border-bottom: 1px dotted #ddd;
+  text-decoration:none;
+}
+
+a:hover {
+  border-bottom: 1px solid #765;
+  color: #000;
+}
+
+.actions {
+  color: #ddd;
+  font-family: georgia;
+  text-transform: lowercase;
+  font-size: 110%;
+}
+.right {
+  float: right;
+}
+
+.admin {
+  color: #666;
+}
+
+.admin .actions {
+  display: none;
+}
+
+.actions input[type=search] {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  height:20px;
+  border: 1px #999 solid;
+}
+
+.actions input[value=search] {
+    display:none;
+}
+
+h1, h2, h3, h4 {
+  font-family: Palatino, georgia;
+  font-weight: normal;
+  color: #555;
+  text-shadow: 1px 0px 2px #999;
+}
+
+/*/HACK*/
 
 select, input[type=text], input[type=password], input[type=image], textarea {
   font: 99% helvetica, arial, freesans, sans-serif;
@@ -70,8 +122,16 @@ html {overflow-y: scroll;}
 
 .site {
   margin: 2em auto 0 auto;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  border-radius: 10px;
+  -moz-box-shadow:1px 1px 8px #999;
+  -webkit-box-shadow:1px 1px 8px #999;
+  box-shadow:1px 1px 8px #999;
   width: 920px;
-  padding: 0 15px;
+  padding: 20px;
+  background: white;
 }
 
 /****************************************************************************/
