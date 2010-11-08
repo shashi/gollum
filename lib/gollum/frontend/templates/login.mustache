@@ -1,0 +1,51 @@
+<div class="guide">
+  <div class="main">
+    <div class="actions">
+      <form action="/search" method="get">
+        <a href="/">Home</a> | <input type="search" name="q" size="10" /> <input type="submit" value="search" />
+      </form>
+    </div>
+    <h1>Login or Register</h1>
+
+    <div class="write">
+      <div class="content gollum">
+        {{#has_message}}
+        <div class="notice"><strong>{{message}}</strong></div>
+        {{/has_message}}
+        <form action="/login" class="edit_wiki" method="post">
+          <label>
+            E-mail<br />
+            <input type="text" class="text" name="email" />
+          </label>
+          <label>
+            Password<br />
+            <input type="password" class="text" name="password" />
+          </label>
+          <div class="actions">
+            <input type="submit" name="login" value="Login" />
+          </div>
+
+          <label>
+          <hr />
+          <small style="float:right">Continue filling out if you want to register</small>
+          </label>
+
+          <label>
+            Password again<br />
+            <input type="password" onkeypress="return event.keyCode!=13" class="text" name="passwordagain" />
+          </label>
+
+          <label>
+            Full Name<br />
+            <input type="text" class="text" onkeypress="if (event.keyCode == 13) document.getElementById('register_button').click()" name="fullname" />
+          </label>
+
+          <div class="actions">
+            <input type="submit" id="register_button" name="register" value="Register" />
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>

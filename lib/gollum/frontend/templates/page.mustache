@@ -5,6 +5,13 @@
         <div>
           <a href="/">Home</a> | 
           <a href="/edit/{{escaped_name}}">Edit</a> | 
+          {{#is_logged_in}}
+          <a href="/logout">Logout</a> | 
+          <a href="/account">Account</a> | 
+          {{/is_logged_in}}
+          {{#not_logged_in}}
+          <a href="/login">Login / Register</a> | 
+          {{/not_logged_in}}
           <input type="search" name="q" size="10" /> <input type="submit" value="search" />
         </div>
       </form>

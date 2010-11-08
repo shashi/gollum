@@ -1,0 +1,49 @@
+<div class="guide">
+  <div class="main">
+    <div class="actions">
+      <form action="/search" method="get">
+        <a href="/">Home</a> | <a href="/logout">Logout</a> |
+        <input type="search" name="q" size="10" /> <input type="submit" value="search" />
+      </form>
+    </div>
+    <h1>Edit account</h1>
+
+    <div class="write">
+      <div class="content gollum">
+        {{#has_message}}
+        <div class="notice"><strong>{{message}}</strong></div>
+        {{/has_message}}
+        <form action="/account" class="edit_wiki" method="post">
+          <label>
+            E-mail: {{email}}
+          </label>
+
+          <label>
+            New password<br />
+            <input type="password" onkeypress="return event.keyCode!=13" class="text" name="password" />
+          </label>
+
+          <label>
+            New password again<br />
+            <input type="password" onkeypress="return event.keyCode!=13" class="text" name="passwordagain" />
+          </label>
+
+          <label>
+            Full Name<br />
+            <input type="text" class="text" onkeypress="return event.keyCode!=13" name="fullname" value="{{fullname}}" />
+          </label>
+
+          <div class="actions">
+            <input type="submit" id="update" name="update" value="Update" />
+            <input type="button" id="delete_fake" onClick="document.getElementById('delete_form').style.display = 'block'" name="delete_fake" value="Delete" />
+            <div id="delete_form" style="display:none">
+                Are you sure you want to delete your account? Deleting will not erase your contributions however.
+                <input type="submit" id="delete" name="delete" value="Yes!" />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>
