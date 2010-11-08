@@ -1,7 +1,7 @@
 module Precious
   module Views
     class Page < Layout
-      attr_reader :content, :page, :footer
+      attr_reader :content, :page, :footer, :is_logged_in
 
       def title
         @page.title
@@ -17,6 +17,10 @@ module Precious
 
       def date
         @page.version.authored_date.strftime("%Y-%m-%d %H:%M:%S")
+      end
+
+      def not_logged_in
+        !@is_logged_in
       end
 
       def has_footer
